@@ -4,6 +4,14 @@
 #    RequestHeader unset Proxy
 #</IfModule>
 
+Options +FollowSymlinks -MultiViews
+RewriteEngine on  
+
+RewriteCond %{HTTP_HOST} ^admin\. [NC]  
+RewriteRule ^(?!app-admin/) app-admin/webroot%{REQUEST_URI} [L,NC]
+
+RewriteRule ^(?!app/) app/webroot%{REQUEST_URI} [L,NC]
+
 <IfModule mod_rewrite.c>
     RewriteEngine on
     RewriteRule    ^$    webroot/    [L]
