@@ -1,0 +1,60 @@
+
+#showimage img{
+	width: 400px;
+}
+
+#accordian {
+	background: #004050;
+	color: white;
+	/*Some cool shadow and glow effect*/
+	margin-top: 25px;
+}
+
+#accordian h3 a{
+	color: #fff;
+}
+/*heading styles*/
+#accordian h3 {
+	font-size: 13px;
+	line-height: 34px;
+	padding: 5px;
+	cursor: pointer;
+	/*fallback for browsers not supporting gradients*/
+	/* background: #003040; */
+	color: #fff;
+	/* background: linear-gradient(#003040, #002535); */
+}
+
+
+/*iconfont styles*/
+#accordian h3 span {
+	font-size: 14px;
+	margin-right: 10px;
+}
+/*list items*/
+#accordian li {
+	list-style-type: none;
+}
+/*links*/
+#accordian ul ul li a {
+	transition: all 0.15s;
+}
+/*hover effect on links*/
+
+
+.current{
+	border-left: 5px solid lightgreen;
+	background: rgba(255,255,255,0.05);
+}
+
+/*Lets hide the non active LIs by default*/
+#accordian ul ul {
+	display: none;
+}
+#accordian li.active ul {
+	display: block;
+}
+
+.columns .side-nav{
+	background: #fafafa;
+}

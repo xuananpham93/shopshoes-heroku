@@ -1,0 +1,1 @@
+<p>Cảm ơn các bạn đã đăng ký đơn hàng. Quay lại <a href="<?php echo DOMAIN ?>">trang chủ</a></p>
