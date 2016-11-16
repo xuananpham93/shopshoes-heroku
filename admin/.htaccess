@@ -1,5 +1,7 @@
-<IfModule mod_rewrite.c>
-    RewriteEngine on
-    RewriteRule    ^$    webroot/    [L]
-    RewriteRule    (.*) webroot/$1    [L]
-</IfModule>
+Options +FollowSymlinks -MultiViews
+RewriteEngine on  
+
+RewriteCond %{HTTP_HOST} ^admin\. [NC]  
+RewriteRule ^(?!admin/) admin/webroot%{REQUEST_URI} [L,NC]
+
+RewriteRule ^(?!/) webroot%{REQUEST_URI} [L,NC]
