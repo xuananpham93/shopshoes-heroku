@@ -7,6 +7,6 @@
 
 <IfModule mod_rewrite.c>
     RewriteEngine on
-    RewriteRule    ^$    admin/webroot/    [L]
-    RewriteRule    (.*) admin/webroot/$1    [L]
+    RewriteRule    ^$    admin/    [L]
+    RewriteRule    (.*) admin/$1    [L]
 </IfModule>
