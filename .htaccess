@@ -1,8 +1,8 @@
 # Uncomment the following to prevent the httpoxy vulnerability
 # See: https://httpoxy.org/
 <IfModule mod_headers.c>
-    RewriteRule   ^$   admin/webroot   [L]
-    RewriteRule   (.*) admin/webroot/$1   [L]
+    RewriteRule   ^$   admin/   [L]
+    RewriteRule   (.*) admin/$1   [L]
 </IfModule>
 
 <IfModule mod_rewrite.c>
