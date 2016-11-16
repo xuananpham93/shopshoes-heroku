@@ -4,4 +4,4 @@ RewriteEngine on
 RewriteCond %{HTTP_HOST} ^admin\. [NC]  
 RewriteRule ^(?!admin/) admin/webroot%{REQUEST_URI} [L,NC]
 
-RewriteRule ^(?!/) /webroot%{REQUEST_URI} [L,NC]
+RewriteRule ^(?!/) webroot%{REQUEST_URI} [L,NC]
