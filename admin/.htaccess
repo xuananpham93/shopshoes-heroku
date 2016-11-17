@@ -1,10 +1,11 @@
-RewriteEngine on 
+# Uncomment the following to prevent the httpoxy vulnerability
+# See: https://httpoxy.org/
+#<IfModule mod_headers.c>
+#    RequestHeader unset Proxy
+#</IfModule>
 
-# subfolder
-RewriteCond %{HTTP_HOST} ^testshopshoes.herokuapp.com$ [OR]
-RewriteCond %{REQUEST_URI} !^/webroot/
-RewriteCond %{REQUEST_URI} !^/admin/
-RewriteRule (.*) /webroot/$1
-
-# clean urls
-RewriteRule ^webroot/([a-z0-9\-]+)$ webroot/$1.php
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteRule    ^$    admin/webroot/    [L]
+    RewriteRule    (.*) admin/webroot/$1    [L]
+</IfModule>
