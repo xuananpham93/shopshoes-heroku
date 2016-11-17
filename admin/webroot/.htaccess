@@ -1,5 +1,7 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    RewriteBase /admin
+    RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ admin/index.php [L]
+        RewriteRule ^(.*)$ /webroot/index.php [QSA,L]
 </IfModule>
